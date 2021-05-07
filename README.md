@@ -1,11 +1,12 @@
 一、加解密算法
+
 1、SM4
 1.1、ECB、PKCS5PADDING模式
+
 加密（密文采用HEX转码）：
-
 var encryptStr = encryptBySM4(“数据”,”密钥”)
-解密：
 
+解密：
 var decryptStr = decryptBySM4(“数据”,”密钥”)
 
 例：
