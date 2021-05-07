@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">/
+    <title>Title</title>
+</head>
+<body>
+<script src="js/sm4.js"></script>
+<script src="js/cryptoFunction.js"></script>
+<script type="text/javascript">
+    var msg = "李镒彤";    //可以为 utf8 串或字节数组
+    var key = "abcdefgh12345678abcdefgh12345678";   //可以为 16 进制串或字节数组，要求为 128 比特
+
+    var encryptStr = encryptBySM4(msg,key);
+    console.log(encryptStr);
+
+    var decryptStr = decryptBySM4(encryptStr,key);
+    console.log(decryptStr);
+</script>
+</body>
+</html>

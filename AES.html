@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/aes.js"></script>
+<script src="js/cryptoFunction.js"></script>
+<script type="text/javascript">
+    var data = "李镒彤";
+    //ECB模式
+    var encryptStr = encryptByAES(data,"12345678abcd1234","ECB");
+    console.log(encryptStr);
+    var decryptStr = decryptByAES(encryptStr,"12345678abcd1234","ECB");
+    console.log(decryptStr);
+
+    //CBC模式
+    // var encryptStr2 = encryptByAES(data,"1234567812345678","CBC","1234567812345678");
+    // console.log(encryptStr2);
+    // var decryptStr2 = decryptByAES(encryptStr,"1234567812345678","CBC","1234567812345678");
+    // console.log(decryptStr2);
+</script>
+</body>
+</html>

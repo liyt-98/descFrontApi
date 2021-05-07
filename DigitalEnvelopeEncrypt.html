@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/aes.js"></script>
+<script src="js/cryptoFunction.js"></script>
+<script src="js/rsa.js"></script>
+<script type="text/javascript">
+    var data = "李镒彤";
+    var publicKey = "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMAzkCkFyGzcb9yHAj1Vl+DgOEzhTQflGcF7RSbwAHBNwFyZoygl4eK6x4JcQtEx9bUdGAdP2Bw8FG2TtzQjy90CAwEAAQ==";
+    var key = "12345678abcd1234";
+    //AES对数据进行加密
+    var encryptStr = encryptByAES(data,key,"ECB");
+    console.log("密文数据"+encryptStr);
+    //RSA对密钥进行加密
+    var encryptKey = encryptByRSA(key,publicKey);
+    console.log("密文密钥"+encryptKey);
+</script>
+</body>
+</html>

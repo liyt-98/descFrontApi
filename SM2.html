@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/sm2.js"></script>
+<script src="js/cryptoFunction.js"></script>
+<script type="text/javascript">
+    //获取SM2公私钥对儿
+    var keyPair = generateKeyPairBySM2();
+    var publicKey = keyPair.publicKey;
+    console.log("公钥:"+publicKey);
+    var privateKey = keyPair.privateKey;
+    console.log("私钥:"+privateKey);
+    //加密
+    var data = "李镒彤";
+    var encryptStr = encryptBySM2(data,publicKey);
+    console.log(encryptStr);
+    //解密
+    var decryptStr =decryptBySM2(encryptStr,privateKey);
+    console.log(decryptStr);
+</script>
+</body>
+</html>

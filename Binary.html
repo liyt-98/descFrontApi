@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/binary.js"></script>
+<script type="text/javascript">
+    var str = "李镒彤";
+    var strToUtf8 = toUtf8(str);
+    //字符串转HEX
+    console.log(stringToHex(strToUtf8));
+    //字符串转Base64
+    console.log(stringToBase64(strToUtf8));
+
+    var hex = stringToHex(strToUtf8);
+    //hex转Base64
+    console.log(hexToBase64(hex));
+
+    var base64 = stringToBase64(strToUtf8);
+    //base64转hex
+    console.log(base64ToHex(base64));
+</script>
+</body>
+</html>
